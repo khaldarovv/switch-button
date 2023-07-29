@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+.switch-input {
+    display: none;
+}
+.switch-input:checked + .switch-controller {
+    background-image: url(./images/light01.png);
+    
+}
+.switch-input:checked + .switch-controller::before {
+    left: 65px;
+}
+.switch-controller {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 60px;
+    background-image: url(images/dark01.png);
+    background-repeat: no-repeat;
+    background-size: 120px;
+    border-radius: 50px;
+    transition: background-image 0.5s ease;
+}
+.switch-controller::before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50px;
+    transition: left 0.5s ease;
+    content: "";
+}
